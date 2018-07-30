@@ -28,7 +28,7 @@ int noteDurations[] = {
   delay(pauseBetweenNotes);
   
   // stop the tone playing:
-  noTone(SPEAKER);
+  noTone(SPEAKER);[
 }
 
 void loop() 

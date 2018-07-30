@@ -13,7 +13,6 @@
  * Arduino has written for us.
  * This is a comment. You can make large blocks of comment
  * by using the slash and asterisk before and after the 
- * comment: /*comment*/
  */
 
 //you can aso make single-line comments with two slashes.
@@ -49,7 +48,7 @@ void setup()
   pinMode(X,INPUT_PULLUP);
   pinMode(Y,INPUT_PULLUP);
   pinMode(B,INPUT_PULLUP);
-
+  pinMode(A,INPUT_PULLUP);
 }
 
 //below is the loop function definition. All the things in this function will run repeatedly, an infinite number of times.
@@ -58,6 +57,17 @@ void loop()
 
   //use an if(condition){action} statement to make something happen only if a certain condition is met. The condition goes inside the parentheses
   //and the action goes inside the curly braces.
+  if(!digitalRead(Y))
+    {
+      digitalWrite(LED_2,HIGH);
+    }
+  else
+    {
+      digitalWrite(LED_2,LOW);
+    }
+
+
+
   if(!digitalRead(X))
     {
       digitalWrite(LED_1,HIGH);
@@ -67,5 +77,28 @@ void loop()
       digitalWrite(LED_1,LOW);
     }
 
+if(!digitalRead(B))
+    {
+      digitalWrite(LED_3,HIGH);
+    }
+  else
+    {
+      digitalWrite(LED_3,LOW);
+    }
+if(!digitalRead(A))
+    {
+      digitalWrite(LED_1,HIGH);
+      digitalWrite(LED_3,HIGH);
+    }
+  else
+    {
+      digitalWrite(LED_1,LOW);
+      digitalWrite(LED_3,LOW);
+    }
+
+
+
+
+
     //Add some other functionality using the buttons and the lights!
-  }
+}
